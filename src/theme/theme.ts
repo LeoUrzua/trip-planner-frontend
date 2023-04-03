@@ -1,18 +1,18 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#1976d2",
-        },
-        secondary: {
-            main: "#dc004e",
-        },
+  palette: {
+    primary: {
+      main: '#1976d2',
     },
-    typography: {
-        fontFamily: "Roboto, sans-serif",
+    secondary: {
+      main: '#dc004e',
     },
-    // add custom variables here
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+  },
+  // add custom variables here
 });
 
 export default theme;
