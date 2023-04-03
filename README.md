@@ -28,30 +28,28 @@ Make sure you have Node.js and npm installed on your system.
     ```bash
    npm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
    ```
-6.
-Create an .eslintrc.json configuration file at the root of the project:
-    ```json
-    {
-      "parser": "@typescript-eslint/parser",
-      "extends": [
+6. Create an .eslintrc.cjs configuration file at the root of the project:
+    ```
+   module.exports = {
+    parser: "@typescript-eslint/parser",
+    extends: [
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier",
-        "prettier/react",
-        "prettier/@typescript-eslint"
-      ],
-      "plugins": ["@typescript-eslint", "react", "prettier"],
-      "rules": {
+    ],
+    plugins: ["@typescript-eslint", "react", "prettier"],
+    rules: {
         "prettier/prettier": "error",
-        "react/react-in-jsx-scope": "off"
-      },
-      "settings": {
-        "react": {
-          "version": "detect"
-        }
-      }
-    }
-    ```
+        "react/react-in-jsx-scope": "off",
+    },
+    settings: {
+        react: {
+            version: "detect",
+        },
+    },
+    };
+   ```
+
 7. Create a .prettierrc configuration file at the root of the project:
     ```json
     {
