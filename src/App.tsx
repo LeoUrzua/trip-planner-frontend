@@ -1,16 +1,11 @@
-import { Button, Typography } from '@mui/material';
-import './App.css';
+import { Typography } from '@mui/material';
+import TripForm from './TripForm';
 
 function App() {
   return (
     <div className="App">
-      <Typography variant="h1">Planner</Typography>
-      <Button variant="contained" color="primary">
-        start here
-      </Button>
-      <Button variant="contained" color="secondary">
-        or here
-      </Button>
+      <Typography variant="h1">Trip Planner</Typography>
+      <TripForm />
     </div>
   );
 }

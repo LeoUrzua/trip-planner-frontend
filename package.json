@@ -9,7 +9,10 @@
     "preview": "vite preview",
     "lint": "eslint --config .eslintrc.cjs --ext .js,.jsx,.ts,.tsx src",
     "lint:fix": "eslint --config .eslintrc.cjs --ext .js,.jsx,.ts,.tsx src --fix",
-    "test": "jest --config jest.config.cjs"
+    "test": "jest --config jest.config.cjs",
+    "test:watch": "jest --config jest.config.cjs --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -17,7 +20,8 @@
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.15",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
