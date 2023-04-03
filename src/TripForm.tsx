@@ -13,13 +13,16 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-type FormData = {
+export type FormData = {
   location: string;
   duration: string;
   activity: string;
 };
 
-const TripForm: React.FC = () => {
+interface TripFormProps {
+  onSubmit: (data: FormData) => void;
+}
+const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
   const { handleSubmit, control } = useForm<FormData>({
     defaultValues: {
       location: '',
@@ -28,11 +31,7 @@ const TripForm: React.FC = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-  };
-
-  const locations = ['Ciudad A', 'Ciudad B', 'Ciudad C'];
+  const locations = ['Cancun', 'Paris', 'London'];
   const durations = ['3 days', '1 week', '2 weeks'];
 
   const activities = [
@@ -47,7 +46,7 @@ const TripForm: React.FC = () => {
         <Typography variant="h4" gutterBottom>
           Plan Your Trip
         </Typography>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Box mb={3}>
             <Controller
               name="location"
