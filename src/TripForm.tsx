@@ -1,4 +1,3 @@
-// src/TripForm.tsx
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
@@ -31,7 +30,7 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
     },
   });
 
-  const locations = ['Cancun', 'Paris', 'London'];
+  const locations = ['Paris', 'Cancun'];
   const durations = ['3 days', '1 week', '2 weeks'];
 
   const activities = [
@@ -60,6 +59,7 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
                   renderInput={(params) => (
                     <TextField {...params} label="Select a city or country" />
                   )}
+                  onChange={(e, data) => field.onChange(data)}
                 />
               )}
             />
