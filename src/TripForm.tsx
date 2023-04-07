@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { useTranslation } from 'react-i18next';
 
 export type FormData = {
   location: string;
@@ -22,6 +23,7 @@ interface TripFormProps {
   onSubmit: (data: FormData) => void;
 }
 const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
+  const { t } = useTranslation();
   const { handleSubmit, control } = useForm<FormData>({
     defaultValues: {
       location: '',
@@ -197,19 +199,33 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
     'Zagreb',
     'Zürich',
   ];
-  const durations = ['3 days', '1 week', '2 weeks'];
+
+  const durations = [
+    { value: 'threeDays', label: t('trip.form.durations.threeDays') },
+    { value: 'oneWeek', label: t('trip.form.durations.oneWeek') },
+    { value: 'twoWeeks', label: t('trip.form.durations.twoWeeks') },
+  ];
 
   const activities = [
-    'Ver cosas emblemáticas',
-    'Tener la mejor experiencia culinaria',
-    'Lo mejor que se pueda hacer',
+    {
+      value: 'landmarks',
+      label: t('trip.form.activities.landmarks'),
+    },
+    {
+      value: 'culinaryExperience',
+      label: t('trip.form.activities.culinaryExperience'),
+    },
+    {
+      value: 'bestPossible',
+      label: t('trip.form.activities.bestPossible'),
+    },
   ];
 
   return (
     <Container maxWidth="sm">
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
         <Typography variant="h4" gutterBottom>
-          Plan Your Trip
+          {t('trip.form.title')}
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Box mb={3}>
@@ -223,7 +239,10 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
                   options={locations}
                   getOptionLabel={(option) => option}
                   renderInput={(params) => (
-                    <TextField {...params} label="Select a city or country" />
+                    <TextField
+                      {...params}
+                      label={t('trip.form.locationLabel')}
+                    />
                   )}
                   onChange={(e, data) => field.onChange(data)}
                 />
@@ -232,15 +251,23 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
           </Box>
           <Box mb={3}>
             <FormControl fullWidth>
-              <InputLabel id="duration-label">Duration</InputLabel>
+              <InputLabel id="duration-label">
+                {t('trip.form.durationLabel')}
+              </InputLabel>
               <Controller
                 name="duration"
                 control={control}
+                defaultValue={durations[0].value}
+                rules={{ required: true }}
                 render={({ field }) => (
-                  <Select labelId="duration-label" label="Duration" {...field}>
+                  <Select
+                    labelId="duration-label"
+                    label={t('trip.form.durationLabel')}
+                    {...field}
+                  >
                     {durations.map((duration, index) => (
-                      <MenuItem key={index} value={duration}>
-                        {duration}
+                      <MenuItem key={index} value={duration.value}>
+                        {duration.label}
                       </MenuItem>
                     ))}
                   </Select>
@@ -250,15 +277,23 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
           </Box>
           <Box mb={3}>
             <FormControl fullWidth>
-              <InputLabel id="activity-label">Activity</InputLabel>
+              <InputLabel id="activity-label">
+                {t('trip.form.activityLabel')}
+              </InputLabel>
               <Controller
                 name="activity"
                 control={control}
+                defaultValue={activities[0].value}
+                rules={{ required: true }}
                 render={({ field }) => (
-                  <Select labelId="activity-label" label="Activity" {...field}>
+                  <Select
+                    labelId="activity-label"
+                    label={t('trip.form.activityLabel')}
+                    {...field}
+                  >
                     {activities.map((activity, index) => (
-                      <MenuItem key={index} value={activity}>
-                        {activity}
+                      <MenuItem key={index} value={activity.value}>
+                        {activity.label}
                       </MenuItem>
                     ))}
                   </Select>
@@ -267,7 +302,7 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
             </FormControl>
           </Box>
           <Button type="submit" variant="contained" color="primary">
-            Submit
+            {t('trip.form.submitButton')}
           </Button>
         </form>
       </Paper>

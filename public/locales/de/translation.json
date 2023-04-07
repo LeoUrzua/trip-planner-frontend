@@ -1,0 +1,29 @@
+{
+  "welcome": "Willkommen",
+  "selectLanguage": "Sprache auswählen",
+  "trip": {
+    "summary": {
+      "title": "Zusammenfassung der Reise"
+    },
+    "form": {
+      "title": "Planen Sie Ihre Reise",
+      "locationLabel": "Ort",
+      "durationLabel": "Dauer",
+      "activityLabel": "Aktivität",
+      "submitButton": "Absenden",
+      "durations": {
+        "threeDays": "3 Tage",
+        "oneWeek": "1 Woche",
+        "twoWeeks": "2 Wochen"
+      },
+      "activities": {
+        "landmarks": "Sehenswürdigkeiten besichtigen",
+        "culinaryExperience": "Das beste kulinarische Erlebnis haben",
+        "bestPossible": "Bestmögliche Aktivitäten"
+      }
+    },
+    "visitorMessage": {
+      "content": "Diese Website befindet sich im Aufbau, vorerst werden keine vollständigen Reiserouten und Bilder innerhalb der Reiserouten angezeigt, Antworten können etwa 3-4 Sekunden dauern und sind auf einige wenige Zeichen beschränkt, es ist wichtig zu wissen, dass dies nicht die endgültige Version ist und wir Ihr Feedback sehr schätzen."
+    }
+  }
+}

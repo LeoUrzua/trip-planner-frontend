@@ -5,12 +5,15 @@ import Typography from '@mui/material/Typography';
 import Markdown from 'react-markdown';
 import { useSpring, animated } from 'react-spring';
 import './markdownStyles.css';
+import { useTranslation } from 'react-i18next';
 
 interface TripSummaryProps {
   response: string;
 }
 
 const TripSummary: React.FC<TripSummaryProps> = ({ response }) => {
+  const { t } = useTranslation();
+
   const fadeIn = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -26,7 +29,7 @@ const TripSummary: React.FC<TripSummaryProps> = ({ response }) => {
       <animated.div style={fadeIn}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h5" gutterBottom>
-            Resumen del Viaje
+            {t('trip.summary.title')}
           </Typography>
           <div className="markdown-content">
             <Markdown>{response}</Markdown>

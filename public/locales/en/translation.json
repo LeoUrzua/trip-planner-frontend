@@ -1,0 +1,29 @@
+{
+  "welcome": "Welcome",
+  "selectLanguage": "Select Language",
+  "trip": {
+    "summary": {
+      "title": "Trip Summary"
+    },
+    "form": {
+      "title": "Plan your trip",
+      "locationLabel": "Location",
+      "durationLabel": "Duration",
+      "activityLabel": "Activity",
+      "submitButton": "Submit",
+      "durations": {
+        "threeDays": "3 days",
+        "oneWeek": "1 week",
+        "twoWeeks": "2 weeks"
+      },
+      "activities": {
+        "landmarks": "See iconic landmarks",
+        "culinaryExperience": "Have the best culinary experience",
+        "bestPossible": "Best possible activities"
+      }
+    },
+    "visitorMessage": {
+      "content": "This site is under construction, full itineraries and images within itineraries will not be shown for now, responses may take about 3-4 seconds to appear and are limited to a few characters, it's important to know that this is not the final version and your feedback is greatly appreciated."
+    }
+  }
+}
