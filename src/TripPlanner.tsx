@@ -29,7 +29,6 @@ const GET_TRIP_SUGGESTIONS = gql`
 const TripPlanner: React.FC = () => {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
   const [response, setResponse] = useState('');
   const [queryVariables, setQueryVariables] = useState({
     location: '',
@@ -78,7 +77,6 @@ const TripPlanner: React.FC = () => {
   const handleFormSubmit = async (data: FormData) => {
     try {
       setIsLoading(true);
-      setIsError(false);
       setQueryVariables({
         location: data.location,
         duration: data.duration,
@@ -93,7 +91,6 @@ const TripPlanner: React.FC = () => {
       });
       setResponse(apiResponse.data.generateItinerary);
     } catch (error) {
-      setIsError(true);
       setResponse('There is an error with the server. Please try again later.');
       console.error(error);
     } finally {
