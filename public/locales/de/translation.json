@@ -5,6 +5,7 @@
     "summary": {
       "title": "Zusammenfassung der Reise"
     },
+    "ladingMessage": "Laden",
     "form": {
       "title": "Planen Sie Ihre Reise",
       "locationLabel": "Ort",

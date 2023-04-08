@@ -1,0 +1,30 @@
+{
+  "welcome": "欢迎",
+  "selectLanguage": "选择语言",
+  "trip": {
+    "summary": {
+      "title": "旅行总结"
+    },
+    "ladingMessage": "加载中",
+    "form": {
+      "title": "规划您的旅行",
+      "locationLabel": "地点",
+      "durationLabel": "持续时间",
+      "activityLabel": "活动",
+      "submitButton": "提交",
+      "durations": {
+        "threeDays": "3天",
+        "oneWeek": "1周",
+        "twoWeeks": "2周"
+      },
+      "activities": {
+        "landmarks": "参观标志性景点",
+        "culinaryExperience": "享受最好的美食体验",
+        "bestPossible": "尽可能最好的活动"
+      }
+    },
+    "visitorMessage": {
+      "content": "本网站正在建设中，目前暂时不会显示完整的行程和行程内的图片，回复可能需要3-4秒钟才能出现，并且仅限于几个字符，重要的是要知道这不是最终版本，我们非常感谢您的反馈。"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { gql, useQuery } from '@apollo/client';
 import { Container } from '@mui/material';
 import i18next from 'i18next';
 import VisitorMessage from './VisitorMessage';
+import { useTranslation } from 'react-i18next';
 
 interface GetTripSuggestionsData {
   generateItinerary: string;
@@ -26,6 +27,7 @@ const GET_TRIP_SUGGESTIONS = gql`
   }
 `;
 const TripPlanner: React.FC = () => {
+  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [response, setResponse] = useState('');
@@ -104,7 +106,7 @@ const TripPlanner: React.FC = () => {
       <TripForm onSubmit={handleFormSubmit} />
       {isLoading ? (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
-          <p>Loading...</p>
+          <p>{t('trip.ladingMessage')}...</p>
         </Container>
       ) : (
         <TripSummary response={response} />

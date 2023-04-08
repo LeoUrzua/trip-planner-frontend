@@ -5,6 +5,7 @@
     "summary": {
       "title": "Trip Summary"
     },
+    "ladingMessage": "Loading",
     "form": {
       "title": "Plan your trip",
       "locationLabel": "Location",

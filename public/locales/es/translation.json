@@ -5,6 +5,7 @@
     "summary": {
       "title": "Resumen del viaje"
     },
+    "ladingMessage": "Cargando",
     "form": {
       "title": "Planea tu viaje",
       "locationLabel": "Ubicación",

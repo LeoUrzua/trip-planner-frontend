@@ -1,0 +1,30 @@
+{
+  "welcome": "Bienvenue",
+  "selectLanguage": "Sélectionnez la langue",
+  "trip": {
+    "summary": {
+      "title": "Résumé du voyage"
+    },
+    "ladingMessage": "Chargement",
+    "form": {
+      "title": "Planifiez votre voyage",
+      "locationLabel": "Emplacement",
+      "durationLabel": "Durée",
+      "activityLabel": "Activité",
+      "submitButton": "Soumettre",
+      "durations": {
+        "threeDays": "3 jours",
+        "oneWeek": "1 semaine",
+        "twoWeeks": "2 semaines"
+      },
+      "activities": {
+        "landmarks": "Voir des monuments emblématiques",
+        "culinaryExperience": "Vivre la meilleure expérience culinaire",
+        "bestPossible": "Meilleures activités possibles"
+      }
+    },
+    "visitorMessage": {
+      "content": "Ce site est en cours de construction, les itinéraires complets et les images à l'intérieur des itinéraires ne seront pas affichés pour le moment, les réponses peuvent prendre environ 3 à 4 secondes pour apparaître et sont limitées à quelques caractères. Il est important de savoir que ce n'est pas la version finale et que vos commentaires sont grandement appréciés."
+    }
+  }
+}
